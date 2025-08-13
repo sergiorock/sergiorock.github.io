@@ -1,0 +1,17 @@
+{
+  "name": "inoxnova-website",
+  "version": "1.0.0",
+  "description": "Sitio web corporativo para INOXNOVA - Trabajos en acero inoxidable a medida",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "build": "echo 'Static site - no build needed' && exit 0",
+    "dev": "npx serve . -p 3000"
+  },
+  "keywords": ["acero", "inoxidable", "corporativo", "website"],
+  "author": "INOXNOVA",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
