@@ -219,7 +219,7 @@ window.addEventListener('scroll', () => {
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
     // Inicializar componentes
-    console.log('INOXNOVA website loaded successfully');
+    console.log('KAINOX website loaded successfully');
     
     // Agregar clase para animaciones CSS
     document.body.classList.add('loaded');

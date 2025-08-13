@@ -1,7 +1,7 @@
 {
-  "name": "inoxnova-website",
+  "name": "kainox-website",
   "version": "1.0.0",
-  "description": "Sitio web corporativo para INOXNOVA - Trabajos en acero inoxidable a medida",
+  "description": "Sitio web corporativo para KAINOX - Trabajos en acero inoxidable a medida",
   "main": "index.html",
   "scripts": {
     "start": "npx serve . -p 3000",
@@ -9,7 +9,7 @@
     "dev": "npx serve . -p 3000"
   },
   "keywords": ["acero", "inoxidable", "corporativo", "website"],
-  "author": "INOXNOVA",
+  "author": "KAINOX",
   "license": "ISC",
   "devDependencies": {
     "serve": "^14.2.1"
