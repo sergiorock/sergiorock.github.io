@@ -43,6 +43,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (href === '#') {
             return;
         }
+        if (href === '#') {
+            return;
+        }
         const target = document.querySelector(href);
         if (target) {
             const headerHeight = header.offsetHeight;
@@ -55,50 +58,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Animaciones al hacer scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-up');
-        }
-    });
-}, observerOptions);
-
-// Observar elementos para animaciones
-const animatedElements = document.querySelectorAll('.service-card, .portfolio-item, .contact-info, .contact-cta');
-animatedElements.forEach(el => observer.observe(el));
-
-// Efecto parallax sutil en el hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image img');
-    if (heroImage && scrolled < window.innerHeight) {
-        heroImage.style.transform = `perspective(1000px) rotateY(-5deg) translateY(${scrolled * 0.1}px)`;
-    }
-});
-
-// Preloader simple
-window.addEventListener('load', () => {
-    document.body.classList.remove('loading');
-});
-
-// Manejo de errores de imágenes
-document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', function() {
-        this.style.display = 'none';
-        console.warn('Error loading image:', this.src);
-    });
-});
-
-// Lazy loading para imágenes del portfolio
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
