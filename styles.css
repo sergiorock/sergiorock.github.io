@@ -102,6 +102,16 @@ body {
     font-weight: var(--font-weight-medium);
 }
 
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
