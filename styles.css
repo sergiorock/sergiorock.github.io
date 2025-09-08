@@ -574,6 +574,25 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
+.footer-logo {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-logo-image {
+    width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.footer-logo-image:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 .footer-brand p {
     color: var(--medium-gray);
     line-height: 1.6;
@@ -708,6 +727,10 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .footer-logo {
+        justify-content: center;
     }
     
     .social-links {
