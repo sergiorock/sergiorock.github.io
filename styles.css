@@ -615,7 +615,7 @@ body {
 
 .contact-info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
     margin-top: var(--spacing-xl);
     align-items: start;
