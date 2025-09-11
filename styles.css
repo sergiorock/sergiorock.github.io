@@ -938,30 +938,61 @@ html {
 }
 
 .footer-map {
-    margin-top: 2rem;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-map-title {
-    font-size: 1rem;
-    margin: 0 0 .75rem;
-    color: #fff; /* ajustá según tu paleta */
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
+    text-align: center;
 }
 
-/* Contenedor responsive 16:9 sin romper el layout */
 .map-embed-wrapper {
     width: 100%;
-    max-width: 400px;   /* no se estira más de 400px */
-    height: 250px;      /* altura fija más chica */
-    border-radius: 8px;
+    max-width: 350px;
+    height: 200px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
-    background: #111;
-    margin: 50px auto;     /* lo centra dentro del footer */
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.map-embed-wrapper:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
 }
 
 .map-embed-wrapper iframe {
     width: 100%;
     height: 100%;
     border: 0;
+    filter: grayscale(20%) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.map-embed-wrapper:hover iframe {
+    filter: grayscale(0%) contrast(1.2);
+}
+
+@media (max-width: 768px) {
+    .map-embed-wrapper {
+        max-width: 300px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-embed-wrapper {
+        max-width: 280px;
+        height: 160px;
+    }
 }
 
 
